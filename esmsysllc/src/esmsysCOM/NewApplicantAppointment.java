@@ -172,7 +172,49 @@ public class NewApplicantAppointment {
 			    TakesScreenshot ts3 = (TakesScreenshot)driver;
 				File source2 = ts3.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(source2, new File("C:\\Users\\Admin\\Documents\\Zoom\\Appointmentplaced.jpg"));
-			
+	
+				//i-693 click
+				driver.findElement(By.xpath("/html/body/div[3]/div/div/form/div/ul/li[2]/a")).click();
+				Thread.sleep(3000);
+				
+				WebElement city = driver.findElement(By.id("txtBirthPlace"));
+				city.sendKeys("austin");
+			    Thread.sleep(1000);
+
+			    WebElement state = driver.findElement(By.id("txtBirthCountry"));
+			    state.sendKeys("Texas USA");
+			    Thread.sleep(1000);
+
+			    WebElement streetaddress = driver.findElement(By.id("txtStreet1"));
+			    streetaddress.sendKeys("17,goldfitch avenue austin texas USA");
+			    Thread.sleep(1000);
+ 
+			    
+			    driver.findElement(By.xpath("//*[@id=\"rdbSte\"]")).click();
+			    Thread.sleep(1000);
+
+			    
+			    WebElement No = driver.findElement(By.id("txtAptSteFlrNo"));
+			    No.sendKeys("17");
+			    Thread.sleep(1000);
+			    
+			    
+			    TakesScreenshot ts4 = (TakesScreenshot)driver;
+				File source3 = ts3.getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFile(source3, new File("C:\\Users\\Admin\\Documents\\Zoom\\I693 done.jpg"));
+				Thread.sleep(3000);
+				
+				//submit
+			    driver.findElement(By.xpath("/html/body/form/div/div[2]/div/div/div[3]/div/button")).click();
+			    Thread.sleep(4000);
+				
+			    TakesScreenshot ts5 = (TakesScreenshot)driver;
+				File source4 = ts5.getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFile(source4, new File("C:\\Users\\Admin\\Documents\\Zoom\\I693 thank you.jpg"));
+				Thread.sleep(3000);
+				
+				
+
 	}
 	}
 }
