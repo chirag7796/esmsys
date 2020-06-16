@@ -102,7 +102,7 @@ public class NewApplicantAppointment {
 		   WebDriver driver = new ChromeDriver();
 		   driver.manage().window().maximize();
 		  
-		   for(int i=0;i<5;i++){
+		   for(int i=0;i<2;i++){
 			   driver.get("http://qa.easyime.org/");
 			   Thread.sleep(3000);
 			   
